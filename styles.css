@@ -113,6 +113,9 @@ h2 {
 /* MEDIA QUERIES */
 
 @media (width < 800px) {
+    .title{
+        font-size: 50px;
+    }
     .container {
         width: 40%;
         padding: 20px;
