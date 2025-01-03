@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: monospace;
+    min-height: 100vh;
+    align-content: center;
+}
+
+.title {
+    width: fit-content;
+    margin: 40px auto;
+    font-size: 70px;
+    background: linear-gradient(120deg, #64a5a4, #b57fab);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h2 {
+    font-size: 40px;
+    text-align: center;
+}
+
+.game-board {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.container {
+    padding: 20px;
+    height: 420px;
+    border: 2px solid #64a5a4;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    .player-title {
+        color: #b57fab;
+    }
+
+    img {
+        border-radius: 100px;
+    }
+}
+
+.roll-btn {
+    background: linear-gradient(120deg, #64a5a4, #b57fab);
+    border: none;
+    border-radius: 20px;
+    display: block;
+    padding: 25px 50px;
+    margin: 30px auto;
+    text-align: center;
+    font-family: monospace;
+    font-size: 20px;
+    color: white;
+}
+
+.roll-btn:hover {
+    cursor: pointer;
+    box-shadow: 0 2px 20px #90768c;
+    transform: translate(0, -3px);
+    transition: transform ease 0.2s;
+}
+
+.results-sign {
+    background: linear-gradient(120deg, #64a5a4ae, #b57fabae);
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    align-content: center;
+    h2 {
+        margin: 0 auto;
+        width: fit-content;
+        text-align: center;
+        color: white;
+        background: rgba(0, 0, 0, 0.242);
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.spin {
+    animation-name: spin;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+/* KEYFRAMES */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* MEDIA QUERIES */
+
+@media (width < 800px) {
+    .container {
+        width: 40%;
+        padding: 20px;
+        height: fit-content;
+        border: 2px solid #64a5a4;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+        .player-title {
+            color: #b57fab;
+            margin: 10px auto;
+            font-size: 25px;
+        }
+
+        img {
+            width: 90%;
+            border-radius: 30%;
+        }
+    }
+}
